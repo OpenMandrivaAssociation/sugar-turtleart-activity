@@ -10,10 +10,10 @@ Url: http://sugarlabs.org/
 
 Source: http://dev.laptop.org/pub/sugar/sources/TurtleArt/TurtleArt-23.tar.bz2
 
-Requires: sugar-toolkit >= 0.83.3
+Requires: sugar-toolkit >= 0.83.4
 Requires: python  
 
-BuildRequires: sugar-toolkit >= 0.83.3
+BuildRequires: sugar-toolkit >= 0.83.4
 BuildRequires: libpython-devel  
 BuildRequires: gettext  
 
