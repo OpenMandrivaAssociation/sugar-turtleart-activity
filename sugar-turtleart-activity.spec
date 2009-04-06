@@ -12,11 +12,11 @@ Source: http://download.sugarlabs.org/sources/sucrose/fructose/TurtleArt/TurtleA
 
 Requires: python-numpy  
 Requires: python  
-Requires: sugar-toolkit >= 0.84.0
+Requires: sugar-toolkit >= 0.84.2
 
 BuildRequires: gettext  
 BuildRequires: libpython-devel  
-BuildRequires: sugar-toolkit >= 0.84.0
+BuildRequires: sugar-toolkit >= 0.84.2
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
