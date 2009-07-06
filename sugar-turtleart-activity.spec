@@ -37,17 +37,14 @@ makes building large programs unfeasible.
 
 
 %build
-python  \
-	setup.py \
-	build
+
+rm -f MANIFEST
+python setup.py build
 
 %install
 rm -rf %{buildroot}
-[ -f setup.py ] && chmod 0755 setup.py
-python  \
-	setup.py \
-	install \
-	--prefix=%{buildroot}/%{_prefix}
+python setup.py install --prefix=%{buildroot}/%{_prefix}
+find %{buildroot} -name '*.py.orig' -print0 | xargs -0 rm -f
 %find_lang org.laptop.TurtleArtActivity
 
 %clean
