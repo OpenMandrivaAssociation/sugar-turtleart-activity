@@ -2,18 +2,18 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: sugar-turtleart-activity
-Version: 69
+Version: 73
 Release: %mkrel 1
 Summary: Pseudo-Logo graphical programming language for Sugar
 License: MIT
 Group: Graphical desktop/Other
 Url: http://sugarlabs.org/
 
-Source: http://download.sugarlabs.org/sources/sucrose/fructose/TurtleArt/TurtleArt-69.tar.bz2
+Source: http://download.sugarlabs.org/sources/sucrose/fructose/TurtleArt/TurtleArt-73.tar.bz2
 
 Requires: python-numpy  
 Requires: python  
-Requires: sugar-toolkit >= 0.86.0
+Requires: sugar-toolkit >= 0.86.1
 
 BuildRequires: gettext  
 BuildRequires: libpython-devel  
@@ -34,7 +34,7 @@ only take constants or variables, not expressions. Limited screen real-estate
 makes building large programs unfeasible.
 
 %prep
-%setup -q -n TurtleArt-69
+%setup -q -n TurtleArt-73
 
 
 %build
