@@ -3,7 +3,7 @@
 
 Name: sugar-turtleart-activity
 Version: 83
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Pseudo-Logo graphical programming language for Sugar
 License: MIT
 Group: Graphical desktop/Other
