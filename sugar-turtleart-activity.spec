@@ -3,7 +3,7 @@
 
 Name: sugar-turtleart-activity
 Version: 83
-Release: %mkrel 2
+Release: 3
 Summary: Pseudo-Logo graphical programming language for Sugar
 License: MIT
 Group: Graphical desktop/Other
@@ -16,10 +16,9 @@ Requires: python
 Requires: sugar-toolkit >= 0.88.0
 
 BuildRequires: gettext  
-BuildRequires: libpython-devel  
+BuildRequires: python-devel  
 BuildRequires: sugar-toolkit >= 0.88.0
 
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
 
 %description
@@ -43,16 +42,51 @@ rm -f MANIFEST
 python setup.py build
 
 %install
-rm -rf %{buildroot}
 python setup.py install --prefix=%{buildroot}/%{_prefix}
 find %{buildroot} -name '*.py.orig' -print0 | xargs -0 rm -f
 %find_lang org.laptop.TurtleArtActivity
-
-%clean
-rm -rf %{buildroot}
 
 %files -f org.laptop.TurtleArtActivity.lang
 %defattr(-,root,root,-)
 %{_datadir}/sugar/activities/*
 %doc NEWS
+
+
+
+%changelog
+* Wed Dec 08 2010 Oden Eriksson <oeriksson@mandriva.com> 83-2mdv2011.0
++ Revision: 615038
+- the mass rebuild of 2010.1 packages
+
+* Sun Apr 04 2010 Aleksey Lim <alsroot@mandriva.org> 83-1mdv2010.1
++ Revision: 531170
+- Sucrose 0.88.0 release
+
+* Mon Oct 12 2009 Aleksey Lim <alsroot@mandriva.org> 73-1mdv2010.0
++ Revision: 456982
+- Push 73
+
+* Fri Sep 25 2009 Aleksey Lim <alsroot@mandriva.org> 69-1mdv2010.0
++ Revision: 449010
+- Update to 69
+
+* Sat Sep 19 2009 Aleksey Lim <alsroot@mandriva.org> 67-1mdv2010.0
++ Revision: 444550
+- Update to 67
+
+* Tue Aug 11 2009 Aleksey Lim <alsroot@mandriva.org> 60-1mdv2010.0
++ Revision: 414906
+- Sucrose 0.85.2
+
+* Wed Mar 04 2009 Aleksey Lim <alsroot@mandriva.org> 41-1mdv2009.1
++ Revision: 348322
+- Sucrose 0.84.0 release
+
+* Mon Feb 23 2009 Aleksey Lim <alsroot@mandriva.org> 36-1mdv2009.1
++ Revision: 344238
+- Sucrose 0.83.6 release
+
+* Sun Jan 11 2009 Aleksey Lim <alsroot@mandriva.org> 23-1mdv2009.1
++ Revision: 328412
+- initial commit
 
