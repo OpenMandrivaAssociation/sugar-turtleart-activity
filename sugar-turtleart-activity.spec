@@ -2,14 +2,14 @@
 #       See http://wiki.sugarlabs.org/go/Deployment_Team/jhconvert for details
 
 Name: sugar-turtleart-activity
-Version: 170
-Release: 2
+Version: 210
+Release: 1
 Summary: Pseudo-Logo graphical programming language for Sugar
 License: MIT
 Group: Graphical desktop/Other
 Url: http://sugarlabs.org/
 
-Source: http://download.sugarlabs.org/sources/sucrose/fructose/TurtleArt/TurtleArt-%{version}.tar.bz2
+Source: http://download.sugarlabs.org/sources/sucrose/fructose/TurtleArt/TurtleBlocks-%{version}.tar.bz2
 
 Requires: python-numpy  
 Requires: python  
@@ -33,16 +33,16 @@ only take constants or variables, not expressions. Limited screen real-estate
 makes building large programs unfeasible.
 
 %prep
-%setup -q -n TurtleArt-%{version}
+%setup -q -n TurtleBlocks-%{version}
 
 
 %build
 
 rm -f MANIFEST
-python setup.py build
+python2 setup.py build
 
 %install
-python setup.py install --prefix=%{buildroot}/%{_prefix}
+python2 setup.py install --prefix=%{buildroot}/%{_prefix}
 find %{buildroot} -name '*.py.orig' -print0 | xargs -0 rm -f
 %find_lang org.laptop.TurtleArtActivity
 
