@@ -7,7 +7,7 @@ Release: 1
 Summary: Pseudo-Logo graphical programming language for Sugar
 License: MIT
 Group: Graphical desktop/Other
-Url: http://sugarlabs.org/
+Url: https://sugarlabs.org/
 
 Source: http://download.sugarlabs.org/sources/sucrose/fructose/TurtleArt/TurtleBlocks-%{version}.tar.bz2
 
